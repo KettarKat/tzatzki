@@ -1,3 +1,118 @@
 @import'_vars';
 @import'_global';
 @import'_fonts';
+//start header 
+.header {
+  border-bottom: 1px solid #1C1B1A;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 131px;
+  }
+  &__logo {
+    font-size: 35px;
+    font-weight: 600;
+  }
+  &__menu {
+    .menu__list {
+      li{
+        display: inline-block;
+        & + li {
+          margin-left: 68px;
+        }
+      }
+    }
+  }
+  &__box { 
+    display: flex;
+    flex-direction: row;
+    a {
+      position: relative;
+      width: 32px;
+      height: 32px;
+      &::before {
+        content: '';
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+    }
+    .favorites-item {
+      &::before {
+        background-image: url(../images/icons/heart.svg);
+        width: 32px;
+        height: 32px;
+      }
+    }
+    .basket-item {
+      width: 37px;
+      margin-left: 18px;
+      &::before {
+        background-image: url(../images/icons/basket.svg);
+        width: 32px;
+        height: 32px;
+      }
+      span {
+        position: absolute;
+        bottom: -50%;
+        right: 0;
+        width: 26px;
+        height: 26px;
+        background-color: $red;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        font-size: 15px;
+        font-weight: 600;
+        margin: auto 0;
+        transform: translateY(-30%);
+      }
+    }
+  }
+}
+//end header
+//start banner section 
+.banner {
+  padding: 101px 0px 150px;
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    &-text {
+      max-width: 415px;
+      width: 100%;
+      h1 {
+        font-size: 63px;
+        line-height: 72px;
+        max-width: 415px;
+        width: 100%;
+        font-weight: 200;
+        padding-bottom: 63px;
+      }
+      p {
+        font-size: 22px;
+        font-weight: 200;
+        padding-bottom: 73px;
+      }
+    }
+    &-img {
+      margin-left: 20px;
+      img {
+        max-width: 1282px;
+        width: 100%;
+        object-fit: cover;
+        border: 1px solid $text;
+      }
+    }
+  }
+  &-btn {
+    padding: 30px 100px;
+  }
+}
+//end banner section
