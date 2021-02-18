@@ -116,3 +116,142 @@
   }
 }
 //end banner section
+//start popular section
+.popular {
+  position: relative;
+  margin-bottom: 160px;
+}
+.product__title {
+  margin-bottom: 38px;
+}
+.product__item { 
+  max-width: 413px;
+  &-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    min-height: 413px;
+    border: 1px solid #000;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+}
+.slick-arrow {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  outline: none;
+}
+.slick-prev {
+  right: 70px;
+}
+//end popular section
+//start features section
+.features {
+  margin-bottom: 150px;
+  &__inner {
+    padding: 0px 115px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      display: block;
+      min-height: 120px;
+      max-width: 120px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &-text {
+      font-size: 25px;
+      line-height: 30px;
+      span {
+        display: block;
+      }
+    }
+  }
+}
+.earrings,
+.rings,
+.pendants {
+  margin-bottom: 65px;
+}
+//end features section
+//start footer
+.footer {
+  padding-top: 100px;
+  margin-bottom: 245px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    &-social {
+      margin-bottom: 78px;
+      li {
+        display: inline-block;
+        & + li {
+          margin-left: 40px;
+        }
+      }
+      a {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    &-title {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    &-news {
+      margin-bottom: 115px;
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 414px;
+        input {
+          border: none;
+          border-bottom: 1px solid #000;
+          outline: none;
+          width: 414px;
+          padding: 8px 15px;
+          outline: none;
+          box-shadow: none;
+          margin-bottom: 25px;
+          &::placeholder {
+            text-align: center;
+            color: #1C1B1A;
+            font-family: 'hypatiasanspro', sans-serif;
+            font-weight: 400;
+          }
+        }
+        button {
+          padding: 15px 130px;
+        }
+      }
+    }
+  }
+}
+//end footer
+
+@import '_media';
