@@ -11,7 +11,7 @@ $(function(){
   document.body.addEventListener('scroll', function() {
     var el = $('header');
     var className = 'fixed';
-    if (document.body.scrollTop > 131 ) {
+    if (document.body.scrollTop > 81 ) {
     if (!el.hasClass(className))
     el.addClass(className);
     }

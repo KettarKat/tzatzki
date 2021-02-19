@@ -49,9 +49,9 @@ button {
 
 body {
   font-family: 'hypatiasanspro', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 19px;
   color: #000;
   overflow-x: hidden;
   background-color: #fff;
@@ -81,7 +81,7 @@ body {
 }
 
 .container {
-  max-width: 1720px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -100,7 +100,8 @@ body {
 }
 
 .title {
-  font-size: 40px;
+  font-size: 30px;
+  line-height: 35px;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -150,8 +151,8 @@ body {
 .header {
   border-bottom: 1px solid #1C1B1A;
   background-color: #fff;
-  height: 131px;
-  top: -131px;
+  height: 81px;
+  top: -81px;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -167,12 +168,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 131px;
+  height: 81px;
 }
 
 .header__logo {
-  font-size: 35px;
-  font-weight: 600;
+  font-size: 27px;
+  line-height: 35px;
+  font-weight: 700;
 }
 
 .header__menu .menu__list li {
@@ -195,8 +197,8 @@ body {
 
 .header__box a {
   position: relative;
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
 }
 
 .header__box a::before {
@@ -212,37 +214,36 @@ body {
 
 .header__box .favorites-item::before {
   background-image: url(../images/icons/heart.svg);
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
 }
 
 .header__box .basket-item {
-  width: 37px;
-  margin-left: 18px;
+  width: 27px;
+  margin-left: 13px;
 }
 
 .header__box .basket-item::before {
   background-image: url(../images/icons/basket.svg);
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
 }
 
 .header__box .basket-item span {
   position: absolute;
   bottom: -50%;
   right: 0;
-  width: 26px;
-  height: 26px;
+  width: 19px;
+  height: 19px;
   background-color: #F63C3C;
   border-radius: 50%;
   text-align: center;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
-  margin: auto 0;
-  -webkit-transform: translateY(-30%);
-      -ms-transform: translateY(-30%);
-          transform: translateY(-30%);
+  -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+          transform: translateY(-40%);
 }
 
 .fixed {
@@ -251,7 +252,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 131px;
+  height: 81px;
   z-index: 99999;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -260,7 +261,7 @@ body {
 }
 
 .banner {
-  padding: 101px 0px 150px;
+  padding: 80px 0px 90px;
 }
 
 .banner__items {
@@ -273,52 +274,56 @@ body {
 }
 
 .banner__item-text {
-  max-width: 415px;
+  max-width: 295px;
   width: 100%;
+  margin-right: 20px;
 }
 
 .banner__item-text h1 {
-  font-size: 63px;
-  line-height: 72px;
-  max-width: 415px;
+  font-size: 48px;
+  line-height: 57px;
+  max-width: 295px;
   width: 100%;
-  font-weight: 200;
-  padding-bottom: 63px;
+  font-weight: 400;
+  padding-bottom: 47px;
 }
 
 .banner__item-text p {
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 25px;
   font-weight: 200;
-  padding-bottom: 73px;
+  padding-bottom: 56px;
 }
 
 .banner__item-img {
-  margin-left: 20px;
+  padding-left: 20px;
 }
 
 .banner__item-img img {
-  max-width: 1282px;
+  min-height: 539px;
+  max-width: 893px;
   width: 100%;
+  display: block;
   -o-object-fit: cover;
      object-fit: cover;
   border: 1px solid #000;
 }
 
 .banner-btn {
-  padding: 30px 100px;
+  padding: 22px 63px;
 }
 
 .popular {
   position: relative;
-  margin-bottom: 160px;
+  margin-bottom: 110px;
 }
 
 .product__title {
-  margin-bottom: 38px;
+  margin-bottom: 20px;
 }
 
 .product__item {
-  max-width: 413px;
+  max-width: 283px;
 }
 
 .product__item-img {
@@ -326,7 +331,7 @@ body {
   background-size: cover;
   background-position: center;
   display: block;
-  min-height: 413px;
+  min-height: 283px;
   border: 1px solid #000;
 }
 
@@ -345,17 +350,22 @@ body {
   background-color: transparent;
   border: none;
   position: absolute;
-  top: -80px;
+  top: -55px;
   right: 0;
   outline: none;
 }
 
+.slick-arrow img {
+  width: 35px;
+  height: 35px;
+}
+
 .slick-prev {
-  right: 70px;
+  right: 45px;
 }
 
 .features {
-  margin-bottom: 150px;
+  margin-bottom: 94px;
 }
 
 .features__inner {
@@ -387,15 +397,15 @@ body {
   background-position: center;
   background-size: cover;
   display: block;
-  min-height: 120px;
-  max-width: 120px;
+  min-height: 84px;
+  max-width: 84px;
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 }
 
 .features__item-text {
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 19px;
+  line-height: 25px;
 }
 
 .features__item-text span {
@@ -405,12 +415,12 @@ body {
 .earrings,
 .rings,
 .pendants {
-  margin-bottom: 65px;
+  margin-bottom: 50px;
 }
 
 .footer {
-  padding-top: 100px;
-  margin-bottom: 245px;
+  padding-top: 54px;
+  margin-bottom: 133px;
 }
 
 .footer__inner {
@@ -430,7 +440,7 @@ body {
 }
 
 .footer__item-social {
-  margin-bottom: 78px;
+  margin-bottom: 44px;
 }
 
 .footer__item-social li {
@@ -438,7 +448,7 @@ body {
 }
 
 .footer__item-social li + li {
-  margin-left: 40px;
+  margin-left: 30px;
 }
 
 .footer__item-social a {
@@ -446,8 +456,8 @@ body {
   background-size: cover;
   background-position: center;
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .footer__item-title {
@@ -456,7 +466,7 @@ body {
 }
 
 .footer__item-news {
-  margin-bottom: 115px;
+  margin-bottom: 50px;
 }
 
 .footer__item-news form {
@@ -467,14 +477,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 414px;
+  width: 305px;
 }
 
 .footer__item-news form input {
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
-  width: 414px;
+  width: 305px;
   padding: 8px 15px;
   outline: none;
   -webkit-box-shadow: none;
@@ -518,14 +528,6 @@ body {
 }
 
 .footer__item-news form button {
-  padding: 15px 130px;
-}
-
-@media (max-width: 1700px) {
-  .product__item {
-    max-width: 370px;
-  }
-  .product__item-img {
-    min-height: 370px;
-  }
+  padding: 15px 93px;
+  border: none;
 }

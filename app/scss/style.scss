@@ -5,18 +5,19 @@
 .header {
   border-bottom: 1px solid #1C1B1A;
   background-color: #fff;
-  height: 131px;
-  top: -131px;
+  height: 81px;
+  top: -81px;
   transition: all 0.5s;
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 131px;
+    height: 81px;
   }
   &__logo {
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 27px;
+    line-height: 35px;
+    font-weight: 700;
   }
   &__menu {
     .menu__list {
@@ -33,8 +34,8 @@
     flex-direction: row;
     a {
       position: relative;
-      width: 32px;
-      height: 32px;
+      width: 25px;
+      height: 25px;
       &::before {
         content: '';
         background-size: cover;
@@ -49,32 +50,31 @@
     .favorites-item {
       &::before {
         background-image: url(../images/icons/heart.svg);
-        width: 32px;
-        height: 32px;
+        width: 25px;
+        height: 25px;
       }
     }
     .basket-item {
-      width: 37px;
-      margin-left: 18px;
+      width: 27px;
+      margin-left: 13px;
       &::before {
         background-image: url(../images/icons/basket.svg);
-        width: 32px;
-        height: 32px;
+        width: 25px;
+        height: 25px;
       }
       span {
         position: absolute;
         bottom: -50%;
         right: 0;
-        width: 26px;
-        height: 26px;
+        width: 19px;
+        height: 19px;
         background-color: $red;
         border-radius: 50%;
         text-align: center;
         color: #fff;
         font-size: 15px;
         font-weight: 600;
-        margin: auto 0;
-        transform: translateY(-30%);
+        transform: translateY(-40%);
       }
     }
   }
@@ -84,7 +84,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 131px;
+  height: 81px;
   z-index: 99999;
   transition: all 0.5s;
   overflow: hidden;
@@ -93,60 +93,64 @@
 //end header
 //start banner section 
 .banner {
-  padding: 101px 0px 150px;
+  padding: 80px 0px 90px;
   &__items {
     display: flex;
     justify-content: space-between;
   }
   &__item {
     &-text {
-      max-width: 415px;
+      max-width: 295px;
       width: 100%;
+      margin-right: 20px;
       h1 {
-        font-size: 63px;
-        line-height: 72px;
-        max-width: 415px;
+        font-size: 48px;
+        line-height: 57px;
+        max-width: 295px;
         width: 100%;
-        font-weight: 200;
-        padding-bottom: 63px;
+        font-weight: 400;
+        padding-bottom: 47px;
       }
       p {
-        font-size: 22px;
+        font-size: 18px;
+        line-height: 25px;
         font-weight: 200;
-        padding-bottom: 73px;
+        padding-bottom: 56px;
       }
     }
     &-img {
-      margin-left: 20px;
+      padding-left: 20px;
       img {
-        max-width: 1282px;
+        min-height: 539px;
+        max-width: 893px;
         width: 100%;
+        display: block;
         object-fit: cover;
         border: 1px solid $text;
       }
     }
   }
   &-btn {
-    padding: 30px 100px;
+    padding: 22px 63px;
   }
 }
 //end banner section
 //start popular section
 .popular {
   position: relative;
-  margin-bottom: 160px;
+  margin-bottom: 110px;
 }
 .product__title {
-  margin-bottom: 38px;
+  margin-bottom: 20px;
 }
 .product__item { 
-  max-width: 413px;
+  max-width: 283px;
   &-img {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     display: block;
-    min-height: 413px;
+    min-height: 283px;
     border: 1px solid #000;
   }
   &-content {
@@ -160,17 +164,21 @@
   background-color: transparent;
   border: none;
   position: absolute;
-  top: -80px;
+  top: -55px;
   right: 0;
   outline: none;
+  img {
+    width: 35px;
+    height: 35px;
+  }
 }
 .slick-prev {
-  right: 70px;
+  right: 45px;
 }
 //end popular section
 //start features section
 .features {
-  margin-bottom: 150px;
+  margin-bottom: 94px;
   &__inner {
     padding: 0px 115px;
     display: flex;
@@ -186,14 +194,14 @@
       background-position: center;
       background-size: cover;
       display: block;
-      min-height: 120px;
-      max-width: 120px;
+      min-height: 84px;
+      max-width: 84px;
       width: 100%;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
     &-text {
-      font-size: 25px;
-      line-height: 30px;
+      font-size: 19px;
+      line-height: 25px;
       span {
         display: block;
       }
@@ -203,13 +211,13 @@
 .earrings,
 .rings,
 .pendants {
-  margin-bottom: 65px;
+  margin-bottom: 50px;
 }
 //end features section
 //start footer
 .footer {
-  padding-top: 100px;
-  margin-bottom: 245px;
+  padding-top: 54px;
+  margin-bottom: 133px;
   &__inner {
     display: flex;
     flex-direction: column;
@@ -218,11 +226,11 @@
   }
   &__item {
     &-social {
-      margin-bottom: 78px;
+      margin-bottom: 44px;
       li {
         display: inline-block;
         & + li {
-          margin-left: 40px;
+          margin-left: 30px;
         }
       }
       a {
@@ -230,8 +238,8 @@
         background-size: cover;
         background-position: center;
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
       }
     }
     &-title {
@@ -239,16 +247,16 @@
       margin-bottom: 25px;
     }
     &-news {
-      margin-bottom: 115px;
+      margin-bottom: 50px;
       form {
         display: flex;
         flex-direction: column;
-        width: 414px;
+        width: 305px;
         input {
           border: none;
           border-bottom: 1px solid #000;
           outline: none;
-          width: 414px;
+          width: 305px;
           padding: 8px 15px;
           outline: none;
           box-shadow: none;
@@ -261,7 +269,8 @@
           }
         }
         button {
-          padding: 15px 130px;
+          padding: 15px 93px;
+          border: none;
         }
       }
     }
