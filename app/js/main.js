@@ -21,4 +21,6 @@ $(function(){
     }
     });
     
-})
+    
+    var mixer = mixitup('.shop__inner-box');
+});
