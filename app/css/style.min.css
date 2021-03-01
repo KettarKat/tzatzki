@@ -274,6 +274,7 @@ body {
   -webkit-transform: translateY(-40%);
       -ms-transform: translateY(-40%);
           transform: translateY(-40%);
+  padding-top: 1px;
 }
 
 .fixed {
@@ -372,7 +373,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 10px;
 }
 
@@ -561,8 +562,8 @@ body {
   background-size: cover;
   background-position: center;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 30px;
+  height: 30px;
 }
 
 .footer__item-title {
@@ -759,4 +760,78 @@ body {
 .payment .info__text li {
   margin-bottom: 0;
   line-height: 23px;
+}
+
+.contact .about__title {
+  margin-bottom: 40px;
+}
+
+.contact__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #000;
+  height: 282px;
+  margin-bottom: 86px;
+}
+
+.contact__box {
+  border-right: 1px solid #000;
+  max-width: 288px;
+  width: 100%;
+  padding: 55px 50px 60px;
+}
+
+.contact__box p {
+  margin-bottom: 20px;
+}
+
+.contact__box .footer__item-social {
+  margin-bottom: 0;
+}
+
+.contact__address {
+  margin: 12px 0px;
+}
+
+.contact__map {
+  width: 100%;
+}
+
+.contact__map iframe {
+  width: 100%;
+  height: 280px;
+}
+
+.liked-product__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: -19px;
+  margin-bottom: 200px;
+}
+
+.liked-product__inner .product__item {
+  position: relative;
+  margin-left: 19px;
+}
+
+.liked-product__inner .product__item .liked-product__delete {
+  position: relative;
+}
+
+.liked-product__inner .product__item .liked-product__delete button {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
