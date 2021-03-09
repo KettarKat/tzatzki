@@ -74,6 +74,11 @@ body {
   background-color: #000;
   color: #fff;
   text-align: center;
+  line-height: 16px;
+  &:hover {
+    background-color: $orange;
+    transition: all 0.5s;
+  }
 }
 .title {
   font-size: 30px;
