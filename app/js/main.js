@@ -31,6 +31,11 @@ $('.slick-arrow').on('mouseover', function() {
     }
     });
     
+
+    $('.menu__links').on('click', function(){
+      $('.dropdown__menu-fixed').addClass('active');
+    });
+
     
     var mixer = mixitup('.shop__inner-box');
 });
