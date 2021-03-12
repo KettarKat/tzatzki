@@ -318,9 +318,9 @@ body {
 .dropdown__menu-links:hover {
   background-color: #E7793B;
   color: #fff;
-  -webkit-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
+  -webkit-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 .header__menu .menu__list {
@@ -1077,4 +1077,104 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   display: block;
+}
+
+.product-card__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-card__item {
+  margin-right: 108px;
+}
+
+.product-card__item #largeImg {
+  border: 1px solid #000;
+  width: 588px;
+  height: 588px;
+  margin-bottom: 15px;
+}
+
+.product-card__item #thumbs a {
+  width: 134px;
+  height: 134px;
+  margin-right: 15px;
+  float: left;
+  outline: none;
+}
+
+.product-card__item #thumbs li {
+  list-style: none;
+}
+
+.product-card__item #thumbs li img {
+  border: 1px solid #000;
+}
+
+.product-card__item #thumbs {
+  margin: 0;
+  padding: 0;
+}
+
+.product-card__text {
+  margin-top: 70px;
+}
+
+.product-card__text .title {
+  margin-bottom: 10px;
+}
+
+.product-card__text form {
+  margin-top: 7px;
+}
+
+.product-card__text form button {
+  border: none;
+  margin-top: 16px;
+}
+
+.product-card__text .jq-selectbox.jqselect {
+  display: block;
+  max-width: 296px;
+  width: 100%;
+}
+
+.product-card__text .jq-selectbox__select {
+  height: 34px;
+  padding: 0 45px 0 10px;
+  border: 1px solid #000;
+  border-radius: 0px;
+  background: #fff;
+  font-family: 'HypatiaSansPro';
+  font-size: 16px;
+  color: #000;
+}
+
+.product-card__text .jq-selectbox__trigger {
+  border-left: 1px solid #000;
+}
+
+.product-card__code {
+  color: #1C1B1A;
+  margin-bottom: 30px;
+}
+
+.product-card__price {
+  font-weight: 600;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.product-card__price span {
+  font-size: 16px;
+  display: block;
+  margin-top: 10px;
+}
+
+.product-card__description p {
+  margin-bottom: 24px;
 }

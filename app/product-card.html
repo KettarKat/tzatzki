@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <div class="wrapper">
     <div class="content">
@@ -60,11 +62,63 @@
           <div class="breadcrumbs__inner">
             <ul class="breadcrumbs__list">
               <li><a href="#">Главная</a></li>
-              <li><span>О нас</span></li>
+              <li><a href="#">Магазин</a></li>
+              <li><a href="#">Серьги</a></li>
+              <li><span>Минималистичные серьги</span></li>
             </ul>
           </div>
         </div>
       </div>
+      <section class="product-card">
+        <div class="container">
+          <div class="product-card__inner">
+            <div class="product-card__item">
+              <p><img id="largeImg" src="images/content/Rectangle 36.jpg" alt="Large image"></p>
+              <ul id="thumbs">
+                <li>
+                  <a href="images/content/card-item1.jpg" title="Image 2"><img
+                      src="images/content/Rectangle 37.jpg"></a>
+                </li>
+                <li>
+                  <a href="images/content/Rectangle 36.jpg" title="Image 3"><img
+                      src="images/content/Rectangle 38.jpg"></a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="product-card__text">
+              <h1 class="title">МИНИМАЛИСТИЧНЫЕ СЕРЬГИ</h1>
+              <p class="product-card__code">арт. 34011228Д</p>
+              <div class="product-card__price">
+                <p>580 руб.</p>
+                <span>В наличии</span>
+              </div>
+              <div class="product-card__description">
+                <p>Серьги минималистичной формы.</p>
+                <p>
+                  Мельхиор покрытый Родием.
+                  Родий — благородный металл, по химической стойкости превосходит платину. Очень редкий элемент, имеет
+                  высокий коэффициент отражения, поэтому широко используется для изготовления «поверхностных» зеркал.
+                </p>
+              </div>
+              <form action="">
+                <select name="material" id="">
+                  <option value="cupronickel">Мельхиор покрытый родием</option>
+                  <option value="silver">Мельхиор покрытый родием</option>
+                  <option value="gold">Мельхиор покрытый родием</option>
+                  <input type="number" min="1" value="1">
+                  <button type="submit" class="black-btn">В корзину</button>
+                </select>
+              </form>
+            </div>
+          </div>
+
+
+        </div>
+      </section>
+
+
+
       <footer class="footer">
         <div class="contaiter">
           <div class="footer__inner">
@@ -88,10 +142,10 @@
                 <h4 class="footer__item-title">РАССЫЛКА НОВОСТЕЙ</h4>
                 <form>
                   <label for="" class="footer__item-email">
-                  <input type="text" placeholder="Введите ваш e-mail" required>
-                </label>
-                <button type="submit" class="black-btn">ПОДПИСАТЬСЯ</button>
-              </form>
+                    <input type="text" placeholder="Введите ваш e-mail" required>
+                  </label>
+                  <button type="submit" class="black-btn">ПОДПИСАТЬСЯ</button>
+                </form>
               </div>
             </div>
             <div class="footer__item">
@@ -108,4 +162,5 @@
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
