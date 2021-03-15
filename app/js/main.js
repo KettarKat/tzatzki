@@ -47,7 +47,7 @@ $('.slick-arrow').on('mouseover', function() {
       largeImg.src = href;
       largeImg.alt = title;
     }
-    
+
     $('input[type="number"], select').styler();
     var mixer = mixitup('.shop__inner-box');
 });

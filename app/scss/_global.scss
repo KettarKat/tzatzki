@@ -18,6 +18,11 @@ a {
   color: $text;
   outline: none !important;
 }
+a:visited,
+a:focus,
+a:active {
+  outline:0 none !important;
+}
 ul,
 li {
   margin: 0;
@@ -39,6 +44,11 @@ p {
 button {
   cursor: pointer;
   text-transform: uppercase;
+}
+button:visited,
+button:focus,
+button:active {
+  outline:0 none !important;
 }
 body {
   font-family: 'HypatiaSansPro';
