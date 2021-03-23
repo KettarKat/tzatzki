@@ -36,6 +36,9 @@ $('.slick-arrow').on('mouseover', function() {
       $('.dropdown__menu-fixed').addClass('active');
     });
 
+
+
+    $('input, select').styler();
     thumbs.onclick = function(event) {
       let thumbnail = event.target.closest('a');
       if (!thumbnail) return;
@@ -47,7 +50,5 @@ $('.slick-arrow').on('mouseover', function() {
       largeImg.src = href;
       largeImg.alt = title;
     }
-
-    $('input[type="number"], select').styler();
     var mixer = mixitup('.shop__inner-box');
 });

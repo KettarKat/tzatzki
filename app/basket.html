@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__wrapper">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__logo">
+                <a href="#" class="header__logo-icon"></a>
+              </div>
+              <div class="header__menu">
+                <ul class="menu__list">
+                  <li>
+                    <a href="#" class="menu__links">КАТАЛОГ</a>
+                    <div class="dropdown__menu">
+                      <a href="#" class="dropdown__menu-links active">Все изделия</a>
+                      <a href="#" class="dropdown__menu-links">Серьги</a>
+                      <a href="#" class="dropdown__menu-links">Кольца</a>
+                      <a href="#" class="dropdown__menu-links">Подвески</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__links">О НАС</a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__links">ИНФО</a>
+                    <div class="dropdown__menu dropdown__menu-info">
+                      <a href="#" class="dropdown__menu-links active">Доставка</a>
+                      <a href="#" class="dropdown__menu-links">Оплата и возврат</a>
+                      <a href="#" class="dropdown__menu-links">Уход за изделиями</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__links">КОНТАКТЫ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="header__box">
+                <ul class="header__box-list">
+                  <li><a href="#" class="favorites-item"></a></li>
+                  <li><a href="#" class="basket-item">
+                      <span>2</span>
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-basket">
+                      <a href="#" class="dropdown__item">
+                        <div class="dropdown__item-info">
+                          <img src="images/content/item-4.jpg" alt="">
+                          <div class="info-name">Минималистичные серьги</div>
+                          <button style="background-image: url(images/icons/cross.svg);"></button>
+                        </div>
+                        <div class="info-price">
+                          1 x 580 руб.
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown__item">
+                        <div class="dropdown__item-info">
+                          <img src="images/content/item-11.jpg" alt="">
+                          <div class="info-name">Мужское кольцо</div>
+                          <button style="background-image: url(images/icons/cross.svg);"></button>
+                        </div>
+                        <div class="info-price">
+                          1 x 580 руб.
+                        </div>
+                      </a>
+                      <p>ИТОГО:
+                        <span>1280 руб.</span>
+                      </p>
+                      <a href="#" class="dropdown-btn black-btn">Оформление заказа </a>
+                      <a href="#" class="dropdown-btn">Просмотр корзины</a>
+                    </div>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="breadcrumbs">
+        <div class="container">
+          <div class="breadcrumbs__inner">
+            <ul class="breadcrumbs__list">
+              <li><a href="#">Главная</a></li>
+              <li><span>Корзина</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <section class="basket">
+        <div class="container">
+          <div class="title">КОРЗИНА</div>
+          <div class="basket__inner">
+            <form action="" class="product-form">
+              <table cellspacing="0">
+                <tr class="table-head">
+                  <th>
+                    <p class="basket__item-product">ТОВАР</p>
+                  </th>
+                  <th><p class="basket__item-price">ЦЕНА</p></th>
+                  <th><p class="basket__item-sum">КОЛИЧЕСТВО</p></th>
+                  <th><p class="basket__item-total">СУММА</p></th>
+                  <th></th>
+                </tr>
+                <tr class="basket__item">
+                  <td>
+                    <div class="basket__item-product">
+                      <a href="#" class="basket__item-img"
+                        style="background-image: url(images/content/item-4.jpg);"></a>
+                      <a href="#">МИНИМАЛИСТИЧНЫЕ СЕРЬГИ
+                        <span>В наличии</span>
+                      </a>
+                    </div>
+                  </td>
+                  <td class="">
+                    <div class="basket__item-price">
+                      580 руб.
+                    </div>
+                    </td>
+                  <td class="">
+                    <div class="basket__item-sum">
+                      <input class="product-quantity" type="number" min="1" value="1">
+                    </div>
+                    
+                  </td>
+                  <td class="">
+                    <div class="basket__item-total">
+                      580 руб.
+                    </div>
+                  </td>
+                  <td>
+                    <div class="basket__item-remove">
+                      <a href="#" style="background-image: url(images/icons/cross.svg);"></a>
+                    </div>
+                    </td>
+                </tr>
+                <tr class="basket__item">
+                  <td>
+                    <div class="basket__item-product">
+                      <a href="#" class="basket__item-img"
+                        style="background-image: url(images/content/item-11.jpg);"></a>
+                      <a href="#">МИНИМАЛИСТИЧНЫЕ СЕРЬГИ
+                        <span>В наличии</span>
+                      </a>
+                    </div>
+                  </td>
+                  <td class="">
+                    <div class="basket__item-price">
+                      350 руб.
+                    </div>
+                    </td>
+                  <td class="">
+                    <div class="basket__item-sum">
+                      <input class="product-quantity" type="number" min="1" value="1">
+                    </div>
+                    
+                  </td>
+                  <td class="">
+                    <div class="basket__item-total">
+                      700 руб.
+                    </div>
+                  </td>
+                  <td>
+                    <div class="basket__item-remove">
+                      <a href="#" style="background-image: url(images/icons/cross.svg);"></a>
+                    </div>
+                    </td>
+                </tr>
+              </table>
+            </form>
+            <div class="basket__btn-box">
+              <div class="basket__btn-inner">
+                <p>ИТОГО: 
+                  <span>1280 руб.</span> 
+                </p>
+                <a href="#" class="black-btn">ОФОРМИТЬ ЗАКАЗ</a>
+                <a href="#" class="basket__btn">ПРОДОЛЖИТЬ ПОКУПКИ</a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="contaiter">
+          <div class="footer__inner">
+            <div class="footer__item">
+              <div class="footer__item-social">
+                <ul>
+                  <li>
+                    <a href="#" style="background-image: url(images/icons/vk.svg);"></a>
+                  </li>
+                  <li>
+                    <a href="#" style="background-image: url(images/icons/inst.svg);"></a>
+                  </li>
+                  <li>
+                    <a href="#" style="background-image: url(images/icons/fb.svg);"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="footer__item-news">
+                <h4 class="footer__item-title">РАССЫЛКА НОВОСТЕЙ</h4>
+                <form>
+                  <label for="" class="footer__item-email">
+                    <input type="text" placeholder="Введите ваш e-mail" required>
+                  </label>
+                  <button type="submit" class="black-btn">ПОДПИСАТЬСЯ</button>
+                </form>
+              </div>
+            </div>
+            <div class="footer__item">
+              <div class="header__logo">
+                <a href="#" class="header__logo-icon"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
