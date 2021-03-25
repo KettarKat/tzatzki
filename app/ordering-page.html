@@ -127,7 +127,7 @@
                   </select>
                 </label>
                 <label>Адрес
-                  <input class="order__input" type="text">
+                  <input class="order__input" type="text" placeholder="Номер дома и название улицы">
                 </label>
                 <label>Телефон
                   <input class="order__input" type="tel">
@@ -136,52 +136,71 @@
                   <input class="order__input" type="email">
                 </label>
                 <div class="order__checkbox">
-                  <input type="checkbox" name="info">                  <p>
+                  <input type="checkbox" name="info">
+                  <p>
                     Нажимая кнопку «Оплатить» вы даете согласие на обработку ваших персональных данных
                   </p>
                 </div>
-                
-                  <div class="order__checkbox">
-                    <input type="checkbox" name="info">
-                    <p>Подписаться на рассылку</p>
-                  </div>
-                  
-                  
-                
+                <div class="order__checkbox">
+                  <input type="checkbox" name="info">
+                  <p>Подписаться на рассылку</p>
+                </div>
               </fieldset>
-              <fieldset>
-                <label>Ваш заказ</label>
+              <fieldset class="order__product">
+                <label class="order__product-label">Ваш заказ</label>
                 <div class="order__product-box">
-                  <div class="order__product-item">
+                  <div class="order__product-item order__product-header">
                     <p>Товар</p>
                     <p>Сумма</p>
                   </div>
                   <div class="order__product-item">
-                    <a href="#" class="order__product-name">Минималистичные серьги</a>
-                    <span class="order__product-number">1</span>
+                    <p>
+                      <a href="#" class="order__product-name">Минималистичные серьги</a>
+                      <span class="order__product-number">1</span>
+                    </p>
                     <p class="order__product-price">580 руб.</p>
                   </div>
                   <div class="order__product-item">
-                    <a href="#" class="order__product-name">Мужское кольцо</a>
-                    <span class="order__product-number">2</span>
+                    <p>
+                      <a href="#" class="order__product-name">Мужское кольцо</a>
+                      <span class="order__product-number">2</span>
+                    </p>
                     <p class="order__product-price">700 руб.</p>
                   </div>
                 </div>
-                <label>
-                  <select name="delivery" id="">
-                    <option value="pickup" selected>Самовывоз</option>
-                    <option value="delivery">Доставка по РФ</option>
-                  </select>
-                  <a href="#">Екатеринбург, Ольховская 2 ТЦ «Пекин»</a>
-                </label>
-                <label for="payment">Варианты оплаты</label>
-                  <input type="radio" name="payment" value="online" 
-                  checked>Банковской картой онлайн
-                  <input type="radio" name="payment" value="offline">Наличными и банковской картой при получении
-                
+                <div class="order__product-box order__product-info">
+                  <label>Способ доставки
+                    <select name="delivery" id="">
+                      <option class="pickup" value="pickup" selected>Самовывоз 
+                      </option>
+                      <option class="delivery" value="delivery">Доставка по РФ</option>
+                    </select>
+                    <a href="#" class="order__product-address">Екатеринбург, Ольховская 2 ТЦ «Пекин»</a>
+                  </label>
+                  <div class="order__product-pay"> 
+                    <label for="payment">Варианты оплаты</label>
+                    <div class="order__product-row">
+                      <input type="radio" name="payment" value="online" checked>
+                      <p>
+                        Банковской картой онлайн
+                      </p>
+                    </div>
+                    <div class="order__product-row">
+                    <input type="radio" name="payment" value="offline">
+                    <p>
+                      Наличными и банковской картой при получении
+                    </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="order__product-sum">
+                  <p>
+                    ИТОГО:
+                  <span>1280 руб.</span>
+                  </p> 
+                </div>
+                <button type="submit" class="order__product-btn black-btn">ОПЛАТИТЬ</button>
               </fieldset>
-
-
             </form>
           </div>
         </div>

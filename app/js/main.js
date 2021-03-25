@@ -8,6 +8,7 @@ $(function(){
     nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/arrow-right.svg" data-bw="images/icons/arrow-right.svg" data-color="images/icons/arrow-hover-right.svg" alt=""></button>',
     prevArrow: '<button class="slick-arrow slick-prev"><img src="images/icons/arrow-left.svg" data-bw="images/icons/arrow-left.svg" data-color="images/icons/arrow-hover-left.svg" alt=""></button>',
   });
+
   $('.slick-arrow').on('mouseleave', function() {
     $(this).find('img').attr('src', function(){
         return $(this).data('bw');
@@ -37,7 +38,13 @@ $('.slick-arrow').on('mouseover', function() {
     });
 
 
-
+    $('.banner__slick').slick({
+      dots: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    
+    });
     $('input, select').styler();
     thumbs.onclick = function(event) {
       let thumbnail = event.target.closest('a');

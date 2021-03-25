@@ -205,6 +205,7 @@
     &:hover {
       transition: all 0.35s;
       background-color: $orange;
+      border: 1px solid $orange;
       color: #fff;
     }
   }
@@ -255,6 +256,39 @@
     display: flex;
     justify-content: space-between;
   }
+  &__slick {
+    position: relative;
+    .slick-dots {      
+      position: absolute;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0; 
+      right: 50%;
+      left: 50%;
+      li {
+        width: 9px;
+        height: 9px;
+        margin: 0px 6px;
+        &.slick-active {
+          button {
+            background-color: #000;
+            opacity: 1;
+          }
+        }
+      }
+      button {
+        background-color: #fff;
+        opacity: 0.6;
+        width: 9px;
+        height: 9px;
+        border: none;
+        border-radius: 50%;
+        padding: 0px;
+      }
+    }
+  }
   &__item {
     &-text {
       max-width: 295px;
@@ -284,20 +318,23 @@
     }
     &-img {
       padding-left: 20px;
-      img {
-        min-height: 539px;
-        max-width: 893px;
-        width: 100%;
-        display: block;
-        object-fit: cover;
-        border: 1px solid $text;
-      }
+      width: 893px;
+    }
+    &-image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 893px;
+      height: 539px;
+      display: block;
+      border: 1px solid #000;
     }
   }
   &-btn {
     padding: 20px 63px;
   }
 }
+
 //end banner section
 //start popular section
 .popular {
@@ -1096,6 +1133,7 @@
     }
     form {
       display: flex;
+      margin-bottom: 150px;
       fieldset {
         padding: 0;
         border: none;
@@ -1126,6 +1164,9 @@
             box-shadow: none;
             outline: none;
             border: 1px solid #000;
+          }
+          &::placeholder {
+            color: #828282;
           }
         }
         .jq-selectbox {
@@ -1191,8 +1232,8 @@
         color: #FFF; 
         }
       }
-      .jq-checkbox {
-        vertical-align: -4px;
+      .jq-checkbox,
+      .jq-radio {
         width: 15px;
         height: 15px;
         margin: 0 10px 0 0;
@@ -1202,7 +1243,8 @@
         border-radius: 0px;
         display: inline-block;
     }
-    .jq-checkbox.checked .jq-checkbox__div {
+    .jq-checkbox.checked .jq-checkbox__div,
+    .jq-radio.checked .jq-radio__div  {
       width: 9px;
       height: 9px;
       margin: 2.2px auto;
@@ -1219,12 +1261,139 @@
   }
   &__checkbox {
     display: flex;
-    justify-content: space-between;
     p {
       max-width: 220px;
       width: 100%;
     }
   }
+  &__product {
+    max-width: 605px;
+    width: 100%;
+    &-label {
+      margin-bottom: 13px;
+    }
+    &-box {
+      border: 1px solid #000;
+      border-bottom: none;
+    }
+    &-item {
+      display: flex;
+      &:last-child {
+        p {
+          border-bottom: none;
+        }
+      }
+      p {
+        width: 50%;
+        padding: 10px;
+        border-bottom: 1px solid #000;
+      }
+    }
+    &-header {
+      p {
+        padding: 5px 10px;
+      }
+    }
+    &-number {
+      padding-left: 12px;
+      margin-left: 8px;
+      font-weight: 600;
+      position: relative;
+      &::before {
+        content: 'x';
+        position: absolute;
+        left: 0;
+      }
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      padding: 20px;
+      padding-bottom: 10px;
+    }
+    &-address {
+      color: #828282;
+      margin-bottom: 15px;
+    }
+    &-pay {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      max-width: 285px;
+      width: 100%;
+      label {
+        margin-bottom: 15px;
+      }
+      p {
+        display: inline-block;
+        max-width: 230px;
+        width: 100%;
+        margin-left: 4px;
+      }
+      input {
+        display: inline-block;
+      }
+    }
+    &-row {
+      display: flex;
+      margin-bottom: 15px;
+      .jq-radio.checked .jq-radio__div {
+        border-radius: 0px;
+    }
+    }
+    &-sum {
+      border: 1px solid #000;
+      padding: 28px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 20px;
+      font-weight: 600;
+      p {
+        width: 50%;
+        text-transform: uppercase;
+        span {
+          text-transform: none;
+        }
+      }
+    }
+    &-btn {
+      margin-top: 15px;
+      text-transform: uppercase;
+      padding: 15px;
+      width: 100%;
+      border: none;
+    }
+  }
 }
 //end ordering page
+//start confirmation page
+.confirmation {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0px 170px;
+  }
+  &__img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 116px;
+    height: 116px;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px; 
+    font-size: 30px;
+    line-height: 40px;
+    a {
+      font-weight: 600;
+    }
+  }
+}
+//end confirmation page
 @import '_media';
