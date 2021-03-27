@@ -476,6 +476,7 @@ body {
   display: inline-block;
   height: 80px;
   position: relative;
+  font-weight: 600;
 }
 
 .header__menu .menu__list li + li {
@@ -492,6 +493,7 @@ body {
   -webkit-transition: all 0.35s;
   -o-transition: all 0.35s;
   transition: all 0.35s;
+  font-weight: 400;
 }
 
 .header__menu .menu__list li:hover .dropdown__menu .dropdown__menu-links {
@@ -530,7 +532,7 @@ body {
 
 .banner__slick .slick-dots {
   position: absolute;
-  bottom: 20px;
+  bottom: 38px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,7 +655,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-weight: 600;
   margin-top: 10px;
 }
 
@@ -858,6 +859,7 @@ body {
 .footer__item-title {
   text-align: center;
   margin-bottom: 25px;
+  font-weight: 600;
 }
 
 .footer__item-news {
@@ -1868,6 +1870,40 @@ body {
 .order__product-address {
   color: #828282;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.order__product-address::before {
+  content: '0 руб.';
+  color: #000;
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  bottom: 37px;
+  right: 22px;
+  z-index: 10;
+}
+
+.order__product-delivery {
+  margin-bottom: 14px;
+  display: none;
+  position: relative;
+}
+
+.order__product-delivery::before {
+  content: '350 руб.';
+  position: absolute;
+  font-size: 16px;
+  font-weight: 600;
+  display: block;
+  bottom: 37px;
+  right: 32px;
+  z-index: 10;
+}
+
+.order__product-delivery.active {
+  display: block;
 }
 
 .order__product-pay {
@@ -1984,4 +2020,160 @@ body {
 
 .confirmation__text a {
   font-weight: 600;
+}
+
+@media (max-width: 1270px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 770px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .header__logo-icon {
+    width: 87px;
+    height: 14px;
+  }
+  .header__menu .menu__list li + li {
+    margin-left: 40px;
+  }
+  .header__box .favorites-item {
+    width: 18px;
+    height: 16px;
+  }
+  .header__box .favorites-item::before {
+    width: 18px;
+    height: 16px;
+  }
+  .header__box .basket-item {
+    width: 17px;
+    height: 20px;
+  }
+  .header__box .basket-item span {
+    right: -8px;
+    bottom: -70%;
+  }
+  .header__box .basket-item::before {
+    width: 17px;
+    height: 20px;
+  }
+  .footer {
+    margin-bottom: 100px;
+  }
+  .footer__item-social {
+    margin-bottom: 40px;
+  }
+  .footer__item-social li + li {
+    margin-left: 26px;
+  }
+  .footer__item-social a {
+    width: 26px;
+    height: 26px;
+  }
+  .footer__item-title {
+    font-size: 14px;
+  }
+  .footer__item-news {
+    margin-bottom: 40px;
+  }
+  .footer__item-news form {
+    width: 198px;
+  }
+  .footer__item-news form input {
+    width: 198px;
+  }
+  .footer__item-news form button {
+    padding: 15px 54px;
+  }
+  .banner {
+    padding: 30px 0px 50px;
+  }
+  .banner__item-text {
+    max-width: 193px;
+    margin-right: 10px;
+  }
+  .banner__item-text h1 {
+    font-size: 32px;
+    line-height: 35px;
+    padding-bottom: 10px;
+  }
+  .banner__item-text p {
+    font-size: 12px;
+    padding-bottom: 20px;
+    line-height: 18px;
+  }
+  .banner__item-text img {
+    width: 64px;
+    height: 52px;
+    margin-bottom: 34px;
+  }
+  .banner__item-img {
+    width: 582px;
+    height: 352px;
+    padding-left: 0;
+  }
+  .banner__item-image {
+    width: 582px;
+    height: 352px;
+  }
+  .banner-btn {
+    padding: 12px 32px;
+  }
+  .product__title {
+    margin-bottom: 11px;
+  }
+  .product__item {
+    max-width: 180px;
+  }
+  .product__item-content {
+    margin-top: 5px;
+  }
+  .product__item-img {
+    min-height: 180px;
+  }
+  .product__item-hover {
+    max-width: 180px;
+    min-height: 180px;
+  }
+  .product__item-hover .hover-favorite svg {
+    top: 8px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+  }
+  .slick-arrow {
+    top: -35px;
+  }
+  .slick-arrow img {
+    width: 21px;
+    height: 21px;
+  }
+  .slick-prev {
+    right: 30px;
+  }
+  .popular {
+    margin-bottom: 56px;
+  }
+  .features {
+    margin-bottom: 50px;
+  }
+  .features__inner {
+    padding: 0px 45px;
+  }
+  .features__item-img {
+    max-width: 64px;
+    min-height: 64px;
+  }
+  .features__item-text {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  .earrings,
+  .rings,
+  .pendants {
+    margin-bottom: 22px;
+  }
 }

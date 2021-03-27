@@ -31,21 +31,28 @@ $('.slick-arrow').on('mouseover', function() {
     el.removeClass(className);
     }
     });
-    
-
     $('.menu__links').on('click', function(){
       $('.dropdown__menu-fixed').addClass('active');
     });
-
-
     $('.banner__slick').slick({
       dots: true,
+      arrows: false,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
     
     });
     $('input, select').styler();
+    $(".delivery").on('click', function(){
+      $(".order__product-delivery").toggleClass("active");
+      $(".order__product-address").toggleClass("disabled");
+    });
+    $(".pickup").on('click', function(){
+      $(".order__product-delivery").toggleClass("active");
+      $(".order__product-address").toggleClass("disabled");
+    });
+    
+
     thumbs.onclick = function(event) {
       let thumbnail = event.target.closest('a');
       if (!thumbnail) return;

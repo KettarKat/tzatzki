@@ -1,0 +1,169 @@
+@media (max-width:1270px) {
+  body {
+    font-size: 12px;
+  }
+  .container {
+    max-width: 770px;
+  }
+  .title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .header__logo-icon {
+    width: 87px;
+    height: 14px;
+  }
+  .header__menu {
+    .menu__list {
+      li + li {
+        margin-left: 40px;
+      }
+    }
+  }
+  .header__box {
+    .favorites-item {
+      width: 18px;
+        height: 16px;
+      &::before {
+        width: 18px;
+        height: 16px;
+      }
+    }
+    .basket-item {
+      width: 17px;
+      height: 20px;
+      span {
+        right: -8px;
+        bottom: -70%;
+      }
+      &::before {
+        width: 17px;
+        height: 20px;
+      }
+    }
+  }
+  .footer {
+    margin-bottom: 100px;
+  }
+  .footer__item {
+    &-social {
+      margin-bottom: 40px; 
+      li + li {
+        margin-left: 26px;
+      }
+      a {
+        width: 26px;
+        height: 26px;
+      }
+    }
+    &-title {
+      font-size: 14px;
+    }
+    &-news {
+      margin-bottom: 40px;
+      form {
+        width: 198px;
+        input {
+          width: 198px; 
+        }
+        button {
+          padding: 15px 54px;
+        }
+      }
+    }
+  }
+  .banner {
+    padding: 30px 0px 50px;
+    &__item {
+      &-text {
+        max-width: 193px;
+        margin-right: 10px;
+        h1 {
+          font-size: 32px;
+          line-height: 35px;
+          padding-bottom: 10px;
+        }
+        p {
+          font-size: 12px;
+          padding-bottom: 20px;
+          line-height: 18px;
+        }
+        img {
+          width: 64px;
+          height: 52px;
+          margin-bottom: 34px;
+        }
+      }
+      &-img {
+        width: 582px;
+        height: 352px;
+        padding-left: 0;
+      }
+      &-image {
+        width: 582px;
+        height: 352px;
+      }
+    }
+    &-btn {
+      padding: 12px 32px;
+    }
+  }
+    .product__title {
+      margin-bottom: 11px;
+    }
+    .product__item {
+      max-width: 180px; 
+      &-content {
+        margin-top: 5px;
+      }
+      &-img {
+        min-height: 180px;
+      }
+      &-hover {
+        max-width: 180px;
+        min-height: 180px;
+        .hover-favorite {
+          svg {
+            top: 8px;
+            right: 10px;
+            width: 15px;
+            height: 15px;
+          }
+        }
+      }
+    }
+    .slick-arrow {
+      top: -35px;
+      img {
+        width: 21px;
+        height: 21px;
+      }
+    }
+    .slick-prev {
+      right: 30px;
+  }
+  .popular {
+    margin-bottom: 56px;
+  }
+  .features {
+    margin-bottom: 50px;
+    &__inner {
+      padding: 0px 45px;
+    }
+    &__item {
+      &-img {
+        max-width: 64px;
+        min-height: 64px;
+      }
+      &-text {
+        font-size: 11px;
+        line-height: 15px;
+      }
+    }
+  }
+  .earrings,
+  .rings,
+  .pendants {
+    margin-bottom: 22px;
+  }
+}
