@@ -7,7 +7,50 @@ $(function(){
     infinite: true,
     nextArrow: '<button class="slick-arrow slick-next"><img src="images/icons/arrow-right.svg" data-bw="images/icons/arrow-right.svg" data-color="images/icons/arrow-hover-right.svg" alt=""></button>',
     prevArrow: '<button class="slick-arrow slick-prev"><img src="images/icons/arrow-left.svg" data-bw="images/icons/arrow-left.svg" data-color="images/icons/arrow-hover-left.svg" alt=""></button>',
+    responsive: [
+      {
+        breakpoint: 680,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          arrows: false,
+        }
+      }
+    ]
   });
+  
+  function checkWidth() {
+    var windowWidth = $('body').innerWidth(),
+        elem = $(".features__inner"); 
+    if(windowWidth < 680){
+      elem.addClass('features__inner-slider');
+    }
+    else{
+      elem.removeClass('features__inner-slider');
+    }
+  }
+  checkWidth(); 
+  $(window).trigger('resize', function(){
+    checkWidth(); 
+  });
+    $('.features__inner-slider').slick({
+      dots: false,
+      arrows: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 680,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            autoplay: true,
+            autoplaySpeed: 1500,
+          }
+        }
+      ]
+    });
 
   $('.slick-arrow').on('mouseleave', function() {
     $(this).find('img').attr('src', function(){
@@ -40,7 +83,16 @@ $('.slick-arrow').on('mouseover', function() {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-    
+      responsive: [
+        {
+          breakpoint: 680,
+          settings: {
+            dots: false,
+            autoplay: true,
+            autoplaySpeed: 1500,
+          }
+        }
+      ]
     });
     $('input, select').styler();
     $(".delivery").on('click', function(){
@@ -64,5 +116,6 @@ $('.slick-arrow').on('mouseover', function() {
       largeImg.src = href;
       largeImg.alt = title;
     }
+    
     var mixer = mixitup('.shop__inner-box');
 });
