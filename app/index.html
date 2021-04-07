@@ -5,8 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
 </head>
 
 <body>
@@ -19,10 +27,10 @@
               <div class="header__logo">
                 <a href="#" class="header__logo-icon"></a>
               </div>
-              <div class="header__menu">
+              <nav class="header__menu">
                 <ul class="menu__list">
                   <li>
-                    <a href="#" class="menu__links">КАТАЛОГ</a>
+                    <a href="shop.html" class="menu__links">КАТАЛОГ</a>
                     <div class="dropdown__menu">
                       <a href="#" class="dropdown__menu-links active">Все изделия</a>
                       <a href="#" class="dropdown__menu-links">Серьги</a>
@@ -31,32 +39,63 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#" class="menu__links">О НАС</a>
+                    <a href="about.html" class="menu__links">О НАС</a>
                   </li>
                   <li>
                     <a href="#" class="menu__links">ИНФО</a>
                     <div class="dropdown__menu dropdown__menu-info">
-                      <a href="#" class="dropdown__menu-links active">Доставка</a>
-                      <a href="#" class="dropdown__menu-links">Оплата и возврат</a>
-                      <a href="#" class="dropdown__menu-links">Уход за изделиями</a>
+                      <a href="delivery.html" class="dropdown__menu-links active">Доставка</a>
+                      <a href="payment.html" class="dropdown__menu-links">Оплата и возврат</a>
+                      <a href="care.html" class="dropdown__menu-links">Уход за изделиями</a>
                     </div>
                   </li>
                   <li>
-                    <a href="#" class="menu__links">КОНТАКТЫ</a>
+                    <a href="contacts.html" class="menu__links">КОНТАКТЫ</a>
                   </li>
                 </ul>
-              </div>
+              </nav>
               <div class="header__box">
-                <a href="#" class="favorites-item"></a>
-                <a href="#" class="basket-item">
-                  <span>2</span>
-                </a>
+                <ul class="header__box-list">
+                  <li><a href="#" class="favorites-item"></a></li>
+                  <li><a href="#" class="basket-item">
+                      <span>2</span>
+                    </a>
+                    <div class="dropdown__menu dropdown__menu-basket">
+                      <a href="#" class="dropdown__item">
+                        <div class="dropdown__item-info">
+                          <img src="images/content/item-4.jpg" alt="">
+                          <div class="info-name">Минималистичные серьги</div>
+                          <button style="background-image: url(images/icons/cross.svg);"></button>
+                        </div>
+                        <div class="info-price">
+                          1 x 580 руб.
+                        </div>
+                      </a>
+                      <a href="#" class="dropdown__item">
+                        <div class="dropdown__item-info">
+                          <img src="images/content/item-11.jpg" alt="">
+                          <div class="info-name">Мужское кольцо</div>
+                          <button style="background-image: url(images/icons/cross.svg);"></button>
+                        </div>
+                        <div class="info-price">
+                          1 x 580 руб.
+                        </div>
+                      </a>
+                      <p>ИТОГО:
+                        <span>1280 руб.</span>
+                      </p>
+                      <a href="#" class="dropdown-btn black-btn">Оформление заказа </a>
+                      <a href="#" class="dropdown-btn">Просмотр корзины</a>
+                    </div>
+                  </li>
+                  <li><div class="header__menu-btn"></div></li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </header>
-      <section class="banner">
+      <section class="banner  ">
         <div class="container">
           <div class="banner__inner">
             <div class="banner__items">
@@ -101,7 +140,7 @@
               <div class="product__item">
                 <a href="#" class="product__item-img" style="background-image: url(images/content/item-1.jpg);"></a>
                 <div class="product__item-content">
-                  <a href="#" class="product__item-name">Гвоздики</a>
+                  <a href="product-card.html" class="product__item-name">Гвоздики</a>
                   <a href="#" class="product__item-price">150 руб.</a>
                 </div>
                 <div class="product__item-hover">

@@ -6,6 +6,9 @@
     max-width: 780px;
     padding: 0px 10px;
   }
+  .breadcrumbs__inner {
+    padding: 20px 0px;
+  }
   .title {
     font-size: 20px;
     line-height: 25px;
@@ -181,7 +184,103 @@
   .pendants {
     margin-bottom: 22px;
   }
+  .about__img {
+    max-width: 382px;
+    height: 289px;
+  }
+  .about__text {
+    max-width: 384px;
+    margin-right: 13px;
+    p {
+      margin-bottom: 23px;
+    }
+  }
+  .info__text {
+    margin-bottom: 30px;
+    h3 {
+      font-size: 16px;
+    }
+    ul {
+      li {
+        padding-left: 12px;
+      }
+    }
+  }
+  .care__item {
+    width: 382px;
+  }
+  .care__banner { 
+    max-width: 382px;
+    margin-bottom: 230px;
+    a {
+      min-height: 381px;
+    }
+  }
+  .care__img-box {
+    width: 382px;
+    .care__img {
+      max-width: 190px;
+      a {
+        min-height: 190px;
+      }
+      &-icon {
+        max-width: 190px;
+        min-height: 190px;
+    }
+    }
+  }
+  .care__icon {
+    width: 53px;
+    height: 53px;
+  }
+  .basket__inner {
+    margin-top: 25px;
+    margin-bottom: 0;
+    form {
+      table {
+        td {
+          padding: 30px 0px;
+        }
+      }
+      .basket__item {
+        &-product {
+          width: 326px;
+        }
+        &-img {
+          width: 78px;
+          height: 78px;
+        }
+        &-price,
+        &-sum, 
+        &-total {
+          width: 130px;
+          span {
+            font-size: 20px;
+          }
+        }
+        &-remove {
+          width: 32px;
+        }
+      }
+    }
+  }
+  .basket__btn-inner {
+    p {
+      font-size: 20px;
+    }
+  }
+  .basket__btn-box {
+    a {
+      width: 288px;
+      padding: 15px 0px;
+      &.basket__btn {
+        padding: 15px 0px;
+        line-height: 15px;
+      }
+    }
+  }
 }
+
 @media (max-width:800px) {
   body {
     font-size: 10px;
@@ -357,44 +456,199 @@
   .pendants {
     margin-bottom: 20px;
   }
+  .about__img {
+    max-width: 324px;
+    height: 245px;
+    margin-top: 22px;
+  }
+  .about__text {
+    max-width: 325px;
+    margin-right: 10px;
+    p {
+      margin-bottom: 12px;
+    }
+  }
+  .info__text {
+    h3 {
+      margin-bottom: 22px;
+    }
+    ul {
+      margin-bottom: 18px;
+      li {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  .care__items .info__text h3 {
+    margin-bottom: 15px;
+  }
+  .care__item {
+    width: 324px;
+  }
+  .care__banner { 
+    max-width: 324px;
+    margin-bottom: 190px;
+    a {
+      min-height: 323px;
+    }
+  }
+  .care__img-box {
+    width: 324px;
+    .care__img {
+      max-width: 162px;
+      a {
+        min-height: 162px;
+      }
+      &-icon {
+        max-width: 162px;
+        min-height: 162px;
+      }
+    }
+  }
+  .care__icon {
+    width: 45px;
+    height: 45px;
+  }
+  .liked-product__inner {
+    margin-left: -10px;
+    margin-bottom: 170px;
+    .product__item {
+      margin-left: 10px;
+    }
+  }
+  .basket__inner {
+    margin-top: 20px;
+    form {
+      table {
+        td {
+          padding: 24px 0px;
+        }
+      }
+      .basket__item {
+        &-product {
+          width: 290px;
+        }
+        &-img {
+          width: 68px;
+          height: 68px;
+        }
+        &-price, 
+        &-total {
+          width: 90px;
+          span {
+            font-size: 17px;
+          }
+        }
+        &-sum {
+          width: 130px;
+        }
+      }
+    }
+  }
+  .basket__btn-inner {
+    p {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+  }
+  .basket__btn-box {
+    a {
+      width: 250px;
+      padding: 10px 0px;
+      &.basket__btn {
+        padding: 10px 0px;
+        line-height: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 @media (max-width:680px) {
   .container {
     max-width: 300px;
     padding: 0px 5px;
   }
+  .breadcrumbs {
+    display: none;
+  }
   .title {
     font-size: 17px;
     line-height: 20px;
+    margin-top: 25px;
   }
   .header__menu {
     .menu__list {
-      li + li {
-        margin-left: 34px;
+      display: none;
+      position: absolute;
+      top: 81px;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      background-color: #fff;
+      margin-top: 0;
+      padding: 48px 0px;
+      height: 360px;
+      .dropdown__menu {
+        display: none;
+      }
+      li {
+        display: block;
+        text-align: center;
+        height: auto;          
+        margin-bottom: 36px;
+        font-size: 17px;
+        &:last-child {
+          position: relative;
+          margin-bottom: 0;
+          &::after {
+            content: '';
+            background-image: url(../images/icons/black-star.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            width: 49px;
+            height: 49px;
+            margin: 0 auto;
+            margin-top: 35px;
+          }
+        }
+        & + li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .header__menu-btn {
+    display: block;
+    cursor: pointer;
+    animation-name: rotateInDownRight;
+    animation-duration: 0.3s;
+    margin-left: 17px;
+    width: 19px;
+    &::before {
+      content: '';
+      background-image: url(../images/icons/menu-btn.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: block;
+      width: 19px;
+      height: 15px;
+    }
+    &.active {
+      animation-duration: 0.3s;
+      animation-name: rotateIn;
+      &::before {
+        content: '';
+        background-image: url(../images/icons/cross.svg);
+        width: 15px;
+        height: 15px;
       }
     }
   }
   .header__box {
-    .favorites-item {
-      width: 19px;
-      height: 17.5px;
-      &::before {
-        width: 19px;
-        height: 17.5px;
-      }
-    }
-    .basket-item {
-      width: 17px;
-      height: 20px;
-      span {
-        right: -8px;
-        bottom: -70%;
-      }
-      &::before {
-        width: 17px;
-        height: 20px;
-      }
-    }
+    display: flex;
   }
   .footer {
     margin-bottom: 85px;
@@ -499,6 +753,129 @@
         font-size: 9px;
         line-height: 11px;
       }
+    }
+  }
+  .about__item {
+    flex-direction: column-reverse;
+  }
+  .about__img {
+    max-width: 292px;
+    height: 221px;
+    margin: 0px 0px 20px 0px;
+  }
+  .about__text {
+    max-width: 100%;
+    margin: 0px 0px 28px 0px;
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .info__text {
+    margin-bottom: 25px;
+    h3 {
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+  }
+  .care__items {
+    flex-direction: column-reverse;
+    .info__text h3 {
+      margin-bottom: 15px;
+    }
+    .about__text {
+      margin-right: 0;
+    }
+  }
+  .care__img-box {
+    display: none;
+  }
+  .care__item {
+    width: 292px;
+  }
+  .care__banner { 
+    max-width: 292px;
+    margin-bottom: 17px;
+    a {
+      min-height: 291px;
+    }
+  }
+  .care__mobile-box {
+    display: flex;
+    margin-bottom: 17px;
+    .care__img {
+      max-width: 141px;
+      a {
+        min-height: 141px;
+      }
+      &-icon {
+        max-width: 141px;
+        min-height: 141px;
+      }
+    }
+  }
+  .care__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .liked-product__inner {
+    margin-bottom: 66px;
+  }
+  .basket__inner {
+    margin-top: 0px;
+    form {
+      table {
+        .table-head {
+          display: none;
+        }
+      }
+      .basket__item {
+        &-product {
+          width: 268px;
+        }
+        &-img {
+          margin-left: 0;
+          width: 104px;
+          height: 104px;
+        }
+        &-price, 
+        &-total,
+        &-sum {
+          display: none;
+        }
+        &-remove {
+          width: 27px;
+          position: relative;
+          a {
+            position: absolute;
+            top: -50px;
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+  .basket__price-mobile {
+    display: block;
+  }
+  .basket__btn-inner {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .basket__btn-box {
+    width: 100%;
+    margin-top: 23px;
+    a {
+      width: 100%;
+    }
+  }
+}
+@media (min-width:681px) {
+  .header__menu {
+    .menu__list {
+      display: block !important;
+    }
+    &-btn {
+      display: none;
     }
   }
 }

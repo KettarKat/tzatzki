@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -14,32 +18,46 @@
   <div class="wrapper">
     <div class="content">
       <header class="header">
-        <div class="container">
-          <div class="header__inner">
-            <div class="header__logo">
-              <a href="index.html" class="header__logo-icon"></a>
-            </div>
-            <div class="header__menu">
-              <ul class="menu__list">
-                <li>
-                  <a href="shop.html">КАТАЛОГ</a>
-                </li>
-                <li>
-                  <a href="about.html">О НАС</a>
-                </li>
-                <li>
-                  <a href="delivery.html">ИНФО</a>
-                </li>
-                <li>
-                  <a href="#">КОНТАКТЫ</a>
-                </li>
-              </ul>
-            </div>
-            <div class="header__box">
-              <a href="#" class="favorites-item"></a>
-              <a href="#" class="basket-item">
-                <span>2</span>
-              </a>
+        <div class="header__wrapper">
+          <div class="container">
+            <div class="header__inner">
+              <div class="header__logo">
+                <a href="#" class="header__logo-icon"></a>
+              </div>
+              <nav class="header__menu">
+                <ul class="menu__list">
+                  <li>
+                    <a href="shop.html" class="menu__links">КАТАЛОГ</a>
+                    <div class="dropdown__menu">
+                      <a href="#" class="dropdown__menu-links active">Все изделия</a>
+                      <a href="#" class="dropdown__menu-links">Серьги</a>
+                      <a href="#" class="dropdown__menu-links">Кольца</a>
+                      <a href="#" class="dropdown__menu-links">Подвески</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="about.html" class="menu__links">О НАС</a>
+                  </li>
+                  <li>
+                    <a href="#" class="menu__links">ИНФО</a>
+                    <div class="dropdown__menu dropdown__menu-info">
+                      <a href="delivery.html" class="dropdown__menu-links active">Доставка</a>
+                      <a href="payment.html" class="dropdown__menu-links">Оплата и возврат</a>
+                      <a href="care.html" class="dropdown__menu-links">Уход за изделиями</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="contacts.html" class="menu__links">КОНТАКТЫ</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="header__box">
+                <a href="liked-products.html" class="favorites-item"></a>
+                <a href="basket.html" class="basket-item">
+                  <span>2</span>
+                </a>
+                <div class="header__menu-btn"></div>
+              </div>
             </div>
           </div>
         </div>

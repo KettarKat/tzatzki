@@ -104,18 +104,23 @@ $('.slick-arrow').on('mouseover', function() {
       $(".order__product-address").toggleClass("disabled");
     });
     
+    $('.header__menu-btn').on('click', function() {
+      $('.menu__list').slideToggle();
+      $('.header__menu-btn').toggleClass('active');
+    })
 
-    thumbs.onclick = function(event) {
+
+
+    
+    var mixer = mixitup('.shop__inner-box');   
+      thumbs.onclick = function(event) {
       let thumbnail = event.target.closest('a');
       if (!thumbnail) return;
       showThumbnail(thumbnail.href, thumbnail.title);
       event.preventDefault();
     }
-
     function showThumbnail(href, title) {
       largeImg.src = href;
       largeImg.alt = title;
     }
-    
-    var mixer = mixitup('.shop__inner-box');
 });
