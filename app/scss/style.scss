@@ -845,30 +845,28 @@
   }
   &__item {
     margin-right: 108px;
-    #largeImg {
-      border: 1px solid #000;
-      width: 588px;
-      height: 588px;
-      margin-bottom: 15px;
-      transition: all 0.3s;
-    }
-    #thumbs a {
-      width: 134px;
-      height: 134px;
-      margin-right: 15px;
-      float: left;
-      outline: none;
-      transition: all 0.3s;
-    }
-    #thumbs li {
-      list-style: none;
+  }
+  &__gallery {
+    .full {
+      margin-bottom: 13px;
       img {
+        max-width: 588px;
         border: 1px solid #000;
       }
     }
-    #thumbs {
-      margin: 0;
-      padding: 0;
+    .thumbs {
+      max-width: 588px;
+      a {
+        & + a {
+          margin-left: 13px;
+        }
+        img {
+          max-width: 134px;
+          width: 100%;
+          border: 1px solid #000;
+        }
+      }
+      
     }
   }
   &__text {
@@ -1180,7 +1178,7 @@
           margin-bottom: 13px;
           max-width: 285px;
           width: 100%;
-          padding: 5px 10px;
+          padding: 7px 10px;
           border: 1px solid #000;
           &:active, 
           &:focus, 
@@ -1199,7 +1197,7 @@
           margin-bottom: 13px;
         }
         .jq-selectbox__select {
-          height: 32px;
+          height: 30px;
           padding: 0 45px 0 10px;
           border: 1px solid #000;
           border-radius: 0px;
@@ -1228,12 +1226,11 @@
         }
       }
         .jq-selectbox.focused {
-        .jq-selectbox__select {
+          .jq-selectbox__select {
           border: 1px solid #000;
-        }
+          }
         }
         .jq-selectbox__dropdown {
-        box-sizing: border-box;
         max-width: 285px;
         width: 100%;
         margin: 2px 0 0;
@@ -1246,14 +1243,14 @@
         font-size: 16px;
         }
         .jq-selectbox li {
-        &:hover {
-        background-color: #000;
-        color: #FFF; 
-        }
+          &:hover {
+          background-color: #000;
+          color: #FFF; 
+          }
         }
         .jq-selectbox li.selected {
-        background-color: #000;
-        color: #FFF; 
+          background-color: #000;
+          color: #FFF; 
         }
       }
       .jq-checkbox,
@@ -1450,4 +1447,5 @@
   }
 }
 //end confirmation page
+
 @import '_media';
