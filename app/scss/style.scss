@@ -113,7 +113,7 @@
   top: 49px;
   left: 0;
   background-color: #fff;
-  z-index: 10;
+  z-index: 20;
   border: 1px solid #000;
   border-top: none;
   height: 0;
@@ -397,20 +397,7 @@
         right: 12px;
         width: 25px;
         height: 25px;
-      }
-      /*&::before {
-        content: '';
-        background-image: url(../images/icons/heart.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 25px;
-        height: 25px;
-        display: block;
-        position: absolute;
-        top: 11px;
-        right: 12px;
-      }*/ 
+      } 
     }
     .hover-basket {
       width: 100%;
@@ -603,14 +590,18 @@
 }
 .pagination {
   text-align: center;
-  font-weight: 700;
   margin-bottom: 80px;
+  font-size: 20px;
   &__list {
     li {
+      font-weight: 400;
       display: inline-block;
       & + li {
         margin-left: 23px;
       }
+    }
+    span {
+      font-weight: 600;
     }
   }
 }
@@ -676,6 +667,11 @@
   .info__text {
     max-width: 457px;
     width: 100%;
+    .payment__requisites {
+      li {
+        padding-left: 0;
+      }
+    }
     li {
       margin-bottom: 0;
       line-height: 23px;
@@ -840,7 +836,6 @@
 .product-card {
   &__inner {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 90px;
   }
   &__item {
@@ -878,7 +873,7 @@
     margin-top: 7px;    
     button {
       border: none;
-      padding: 9px 54px;
+      padding: 11px 54px;
       height: 35px;
       margin-top: 0;
       margin-left: 15px;
@@ -904,6 +899,11 @@
   &__description {
     p {
       margin-bottom: 24px;
+      max-width: 270px;
+        width: 100%;
+        span {
+          display: block;
+        }
     }
   }
 }
@@ -985,53 +985,53 @@
     background: #fff;
     font-family: 'HypatiaSansPro';
     font-size: 16px;
+    text-align: center;
     color: #000;
     box-shadow: none;
   }
   .jq-selectbox__trigger {
-  border-left: 1px solid #000;
-  &-arrow {
-    border: none;
-    background-image: url(../images/icons/arrow-down.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 16px;
-    height: 9px;
-    display: block;
-    top: 12px;
-    right: 8px;
-  }
-  }
+    border-left: 1px solid #000;
+    &-arrow {
+      border: none;
+      background-image: url(../images/icons/arrow-down.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: 16px;
+      height: 9px;
+      display: block;
+      top: 12px;
+      right: 8px;
+    } 
+  } 
   .jq-selectbox.focused {
-  .jq-selectbox__select {
-    border: 1px solid #000;
-  }
+    .jq-selectbox__select {
+      border: 1px solid #000;
+    }
   }
   .jq-selectbox__dropdown {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 2px 0 0;
-  padding: 0;
-  border: 1px solid #000;
-  border-radius: 0px;
-  background: #FFF;
-  box-shadow: 0 2px 10px rgba(0,0,0,.2);
-  font-family: 'HypatiaSansPro';
-  font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 2px 0 0;
+    padding: 0;
+    border: 1px solid #000;
+    border-radius: 0px;
+    background: #FFF;
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    font-family: 'HypatiaSansPro';
+    font-size: 16px;
   }
   .jq-selectbox li {
-  &:hover {
-  background-color: #000;
-  color: #FFF; 
-  }
+    &:hover {
+    background-color: #000;
+    color: #FFF; 
+    }
   }
   .jq-selectbox li.selected {
-  background-color: #000;
-  color: #FFF; 
+    background-color: #000;
+    color: #FFF; 
   }
 }
-
 .viewed-item {
   .product__items {
     display: flex;
@@ -1263,16 +1263,22 @@
         box-shadow: none;
         border-radius: 0px;
         display: inline-block;
-    }
-    .jq-checkbox.checked .jq-checkbox__div,
-    .jq-radio.checked .jq-radio__div  {
-      width: 9px;
-      height: 9px;
-      margin: 2.2px auto;
-      border: none;
-      background-color: #000;
-      transform: none;
-  }
+      }
+      .jq-checkbox.checked .jq-checkbox__div,
+      .jq-radio.checked .jq-radio__div  {
+        width: 9px;
+        height: 9px;
+        margin: 2.2px auto;
+        border: none;
+        background-color: #000;
+        transform: none;
+      }
+      .jq-radio {
+        input {
+          width: 15px;
+          height: 15px;
+        }
+      }
     }
     .order__aside {
       max-width: 285px;
@@ -1391,7 +1397,7 @@
       margin-bottom: 15px;
       .jq-radio.checked .jq-radio__div {
         border-radius: 0px;
-    }
+      }
     }
     &-sum {
       border: 1px solid #000;

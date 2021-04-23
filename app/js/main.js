@@ -51,8 +51,6 @@ $(function(){
         }
       ]
     });
-
-
   $('.slick-arrow').on('mouseleave', function() {
     $(this).find('img').attr('src', function(){
         return $(this).data('bw');
