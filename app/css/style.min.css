@@ -9,6 +9,7 @@ body {
   height: 100%;
   position: relative;
   overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
 }
 
 *,
@@ -27,7 +28,9 @@ a {
 
 a:visited,
 a:focus,
-a:active {
+a:active,
+a:focus-within,
+a:hover {
   outline: 0 none !important;
 }
 
