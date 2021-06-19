@@ -624,6 +624,11 @@
     p {
       margin-bottom: 25px;
     }
+    a {
+      &:hover {
+        color: $orange;
+      }
+    }
   }
   &__img {
     background-repeat: no-repeat;
@@ -748,7 +753,7 @@
 .care {
   &__items {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     .info__text {
       max-width: 590px;
@@ -758,6 +763,7 @@
     }
     .about__text {
       margin-right: 20px;
+      margin-bottom: 20px;
     }
     ul {
       li {
@@ -774,8 +780,7 @@
   }
   &__item {
     display: flex;
-    width: 588px;
-    flex-direction: column;
+    flex-direction: row;
   }
   &__img,
   &__banner {
@@ -783,16 +788,18 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      border: 1px solid #000;
     }
   }
   &__banner {
-    max-width: 588px;
-    margin-bottom: 255px;
+    width: 588px;
     a {
       min-height: 586px;
       width: 100%;
     }
+  }
+  &__text {
+    margin-left: 20px;
+    margin-right: 0;
   }
   &__img-box {
     display: flex;
