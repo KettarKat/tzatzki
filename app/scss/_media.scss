@@ -446,20 +446,29 @@
       }
     }
   }
+  .product__item-wrapper {
+    height: 184px;
+    .hover-basket {
+      padding: 10px 0px;
+    }
+    .hover-favorite {
+      svg {
+        width: 19px;
+        height: 18px;
+      }
+    }
+  }
   .pagination {
     margin-bottom: 26px;
     margin-top: 18px;
   }
-  .product__item {
-    &-hover {
-      .hover-favorite {
-        svg {
-          width: 19px;
-          height: 18px;
+  .liked-product__inner {
+    .product__item {
+      &-wrapper {
+        height: 184px;
+        .hover-basket {
+          padding: 10px 0px;
         }
-      }
-      .hover-basket {
-        padding: 10px 0px;
       }
     }
   }
@@ -777,6 +786,12 @@
     margin-bottom: 170px;
     .product__item {
       margin-left: 10px;
+      &-wrapper {
+        height: 157px;
+        .hover-basket {
+          padding: 8px 0px;
+        }
+      }
     }
   }
   .basket__inner {
@@ -1025,6 +1040,16 @@
           margin-bottom: 22px;
         }
       }
+    }
+  }
+  .product__item-wrapper {
+    height: 157px;
+    .hover-basket {
+      padding: 8px 0px;
+    }
+    .hover-favorite {
+      top: 10px;
+      right: 10px;
     }
   }
   .pagination {
@@ -1410,6 +1435,17 @@
   }
   .liked-product__inner {
     margin-bottom: 20px;
+    .product__item {
+      margin-left: 10px;
+      &-wrapper {
+        height: 140px;
+        &:hover {
+          .hover-basket {
+          display: none;
+          }
+        }
+      }
+    }
   }
   .contact {
     .about__title {
@@ -1591,19 +1627,6 @@
       }
     }
   }
-  .product__item {
-    &-hover {
-      .hover-favorite {
-        svg {
-          width: 19px;
-          height: 18px;
-        }
-      }
-      .hover-basket {
-        padding: 6px 0px;
-      }
-    }
-  }
   .product-card {
     &__inner {
       margin-bottom: 47px;
@@ -1667,6 +1690,22 @@
     .info__text {
       text-align: center;
       margin-top: 40px;
+    }
+  }
+  .product__item-wrapper {
+    height: 140px;
+    &:hover {
+      .hover-basket {
+        display: none;
+      }
+    }
+    .hover-favorite {
+      top: 9px;
+      right: 9px;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 }

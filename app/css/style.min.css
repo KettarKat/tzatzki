@@ -647,15 +647,61 @@ body {
 .product__item {
   max-width: 283px;
   width: 100%;
-  position: relative;
 }
 
 .product__item-wrapper {
   background-color: #000;
+  height: 283px;
+  position: relative;
+}
+
+.product__item-wrapper .hover-favorite {
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: 15px;
+}
+
+.product__item-wrapper .hover-favorite:hover g, .product__item-wrapper .hover-favorite:active g, .product__item-wrapper .hover-favorite:focus g {
+  fill: #F63C3C;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.product__item-wrapper .hover-favorite svg {
+  width: 25px;
+  height: 25px;
+}
+
+.product__item-wrapper .hover-basket {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 0px;
+  text-align: center;
+  opacity: 0;
+  border: 1px solid #000;
+  border-top: none;
+}
+
+.product__item-wrapper .hover-basket:hover {
+  background-color: #E7793B;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .product__item-wrapper:hover {
   cursor: pointer;
+}
+
+.product__item-wrapper:hover .hover-favorite,
+.product__item-wrapper:hover .hover-basket {
+  opacity: 1;
 }
 
 .product__item-wrapper:hover .product__item-img {
@@ -697,44 +743,6 @@ body {
           justify-content: space-between;
   opacity: 0;
   cursor: pointer;
-}
-
-.product__item-hover .hover-favorite {
-  position: relative;
-  display: none;
-}
-
-.product__item-hover .hover-favorite:hover g, .product__item-hover .hover-favorite:active g, .product__item-hover .hover-favorite:focus g {
-  fill: #F63C3C;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.product__item-hover .hover-favorite svg {
-  position: absolute;
-  top: 11px;
-  right: 12px;
-  width: 25px;
-  height: 25px;
-}
-
-.product__item-hover .hover-basket {
-  width: 100%;
-  background-color: #000;
-  color: #fff;
-  padding: 15px 0px;
-  text-align: center;
-  opacity: 0;
-  border: 1px solid #000;
-  border-top: none;
-}
-
-.product__item-hover .hover-basket:hover {
-  background-color: #E7793B;
-  -webkit-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 
 .product__item:hover .product__item-hover {
@@ -942,10 +950,6 @@ body {
   border: none;
 }
 
-.shop__inner {
-  text-align: center;
-}
-
 .shop__inner-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1148,15 +1152,36 @@ body {
 }
 
 .liked-product__inner .product__item {
-  position: relative;
   margin-left: 19px;
 }
 
-.liked-product__inner .product__item .liked-product__delete {
+.liked-product__inner .product__item-wrapper {
   position: relative;
 }
 
-.liked-product__inner .product__item .liked-product__delete button {
+.liked-product__inner .product__item-wrapper .hover-basket {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0px;
+}
+
+.liked-product__inner .product__item-wrapper .hover-basket:hover {
+  background-color: #E7793B;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.liked-product__inner .product__item-wrapper .liked-product__delete {
+  opacity: 0;
+}
+
+.liked-product__inner .product__item-wrapper .liked-product__delete button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1167,6 +1192,11 @@ body {
   position: absolute;
   top: 12px;
   right: 12px;
+}
+
+.liked-product__inner .product__item-wrapper:hover .hover-basket,
+.liked-product__inner .product__item-wrapper:hover .liked-product__delete {
+  opacity: 1;
 }
 
 .care__items {
@@ -2445,15 +2475,24 @@ body {
     margin-left: 8px;
     margin-bottom: 28px;
   }
+  .product__item-wrapper {
+    height: 184px;
+  }
+  .product__item-wrapper .hover-basket {
+    padding: 10px 0px;
+  }
+  .product__item-wrapper .hover-favorite svg {
+    width: 19px;
+    height: 18px;
+  }
   .pagination {
     margin-bottom: 26px;
     margin-top: 18px;
   }
-  .product__item-hover .hover-favorite svg {
-    width: 19px;
-    height: 18px;
+  .liked-product__inner .product__item-wrapper {
+    height: 184px;
   }
-  .product__item-hover .hover-basket {
+  .liked-product__inner .product__item-wrapper .hover-basket {
     padding: 10px 0px;
   }
   .product-card__inner {
@@ -2742,6 +2781,12 @@ body {
   .liked-product__inner .product__item {
     margin-left: 10px;
   }
+  .liked-product__inner .product__item-wrapper {
+    height: 157px;
+  }
+  .liked-product__inner .product__item-wrapper .hover-basket {
+    padding: 8px 0px;
+  }
   .basket__inner {
     margin-top: 20px;
   }
@@ -2950,6 +2995,16 @@ body {
   .shop__inner-box .product__item {
     margin-left: 4px;
     margin-bottom: 22px;
+  }
+  .product__item-wrapper {
+    height: 157px;
+  }
+  .product__item-wrapper .hover-basket {
+    padding: 8px 0px;
+  }
+  .product__item-wrapper .hover-favorite {
+    top: 10px;
+    right: 10px;
   }
   .pagination {
     margin-bottom: 22px;
@@ -3311,6 +3366,15 @@ body {
   .liked-product__inner {
     margin-bottom: 20px;
   }
+  .liked-product__inner .product__item {
+    margin-left: 10px;
+  }
+  .liked-product__inner .product__item-wrapper {
+    height: 140px;
+  }
+  .liked-product__inner .product__item-wrapper:hover .hover-basket {
+    display: none;
+  }
   .contact .about__title {
     margin-bottom: 24px;
   }
@@ -3480,13 +3544,6 @@ body {
   .pagination__list li + li {
     margin-left: 23px;
   }
-  .product__item-hover .hover-favorite svg {
-    width: 19px;
-    height: 18px;
-  }
-  .product__item-hover .hover-basket {
-    padding: 6px 0px;
-  }
   .product-card__inner {
     margin-bottom: 47px;
     -webkit-box-orient: vertical;
@@ -3548,6 +3605,20 @@ body {
   .information .info__text {
     text-align: center;
     margin-top: 40px;
+  }
+  .product__item-wrapper {
+    height: 140px;
+  }
+  .product__item-wrapper:hover .hover-basket {
+    display: none;
+  }
+  .product__item-wrapper .hover-favorite {
+    top: 9px;
+    right: 9px;
+  }
+  .product__item-wrapper .hover-favorite svg {
+    width: 15px;
+    height: 15px;
   }
 }
 

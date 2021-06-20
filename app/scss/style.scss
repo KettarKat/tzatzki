@@ -249,7 +249,6 @@
   height: auto;
   z-index: 99998;
   transition: all 0.5s;
-
 }
 
 //end header
@@ -355,11 +354,51 @@
 .product__item { 
   max-width: 283px;
   width: 100%;
-  position: relative;
   &-wrapper {
     background-color: #000;
+    height: 283px;
+    position: relative;
+    .hover-favorite {
+      position: absolute;
+      opacity: 0;
+      top: 14px;
+      right: 15px;
+      &:hover,
+      &:active,
+      &:focus {
+        g {
+          fill: $red;
+          transition: 0.3s;
+        }
+      }
+      svg {
+        width: 25px;
+        height: 25px;
+      } 
+    }
+    .hover-basket {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #000;
+      color: #fff;
+      padding: 15px 0px;
+      text-align: center;
+      opacity: 0;        
+      border: 1px solid #000;
+      border-top: none;
+      &:hover {
+        background-color: $orange;
+        transition: all 0.3s;
+      }
+    }
     &:hover {
       cursor: pointer;
+      .hover-favorite,
+      .hover-basket {
+        opacity: 1;
+      }
       .product__item-img {
         opacity: 0.9;
       }
@@ -390,39 +429,8 @@
     justify-content: space-between;
     opacity: 0;
     cursor: pointer;
-    .hover-favorite {
-      position: relative;
-      display: none;
-      &:hover,
-      &:active,
-      &:focus {
-        g {
-          fill: $red;
-          transition: 0.3s;
-        }
-      }
-      svg {
-        position: absolute;
-        top: 11px;
-        right: 12px;
-        width: 25px;
-        height: 25px;
-      } 
-    }
-    .hover-basket {
-      width: 100%;
-      background-color: #000;
-      color: #fff;
-      padding: 15px 0px;
-      text-align: center;
-      opacity: 0;        
-      border: 1px solid #000;
-      border-top: none;
-      &:hover {
-        background-color: $orange;
-        transition: all 0.3s;
-      }
-    }
+    
+    
   }
   &:hover {
     .product__item-hover {
@@ -559,7 +567,7 @@
 //start shop page
 .shop {
   &__inner {
-    text-align: center;
+    
     &-btn {
       display: flex;
       justify-content: space-between;
@@ -729,10 +737,26 @@
     margin-bottom: 200px;
     flex-wrap: wrap;
     .product__item {
-      position: relative;
       margin-left: 19px;
+    }
+    .product__item-wrapper {
+      position: relative;
+      .hover-basket {
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        width: 100%;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0px;
+        &:hover {
+          background-color: $orange;
+          transition: 0.2s;
+        }
+      }
       .liked-product__delete {
-        position: relative;
+        opacity: 0;
         button {
           background-repeat: no-repeat;
           background-size: cover;
@@ -744,6 +768,13 @@
           position: absolute;
           top: 12px;
           right: 12px;
+          
+        }
+      }
+      &:hover {
+        .hover-basket,
+        .liked-product__delete {
+          opacity: 1;
         }
       }
     }
