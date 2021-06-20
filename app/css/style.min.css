@@ -2202,10 +2202,6 @@ body {
   .product__item-img {
     min-height: 184px;
   }
-  .product__item-hover {
-    max-width: 184px;
-    min-height: 184px;
-  }
   .product__item-hover .hover-favorite svg {
     top: 8px;
     right: 10px;
@@ -2667,10 +2663,6 @@ body {
     margin-top: 5px;
   }
   .product__item-img {
-    min-height: 157px;
-  }
-  .product__item-hover {
-    max-width: 157px;
     min-height: 157px;
   }
   .product__item-price {
@@ -3190,10 +3182,6 @@ body {
     margin-top: 5px;
   }
   .product__item-img {
-    min-height: 140px;
-  }
-  .product__item-hover {
-    max-width: 140px;
     min-height: 140px;
   }
   .product__item-price {
