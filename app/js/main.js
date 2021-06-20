@@ -33,24 +33,6 @@ $(function(){
   $(window).trigger('resize', function(){
     checkWidth(); 
   });
-    //$('.features__inner-slider').slick({
-      //dots: false,
-     // arrows: false,
-     // slidesToShow: 4,
-     //// slidesToScroll: 4,
-      //infinite: true,
-     // responsive: [
-      //  {
-        //  breakpoint: 680,
-        //  settings: {
-         //   slidesToShow: 2,
-           // slidesToScroll: 2,
-          //  autoplay: true,
-           // autoplaySpeed: 1500,
-         // }
-        //}
-      //]
-    //});//
   $('.slick-arrow').on('mouseleave', function() {
     $(this).find('img').attr('src', function(){
         return $(this).data('bw');

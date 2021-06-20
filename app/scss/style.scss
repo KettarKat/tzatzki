@@ -333,7 +333,6 @@
       width: 100%;
       min-height: 520px;
       display: block;
-      border: 1px solid #000;
     }
   }
   &-btn {
@@ -357,6 +356,15 @@
   max-width: 283px;
   width: 100%;
   position: relative;
+  &-wrapper {
+    background-color: #000;
+    &:hover {
+      cursor: pointer;
+      .product__item-img {
+        opacity: 0.9;
+      }
+    }
+  }
   &-img {
     background-repeat: no-repeat;
     background-size: cover;
@@ -364,23 +372,24 @@
     display: block;
     min-height: 283px;
     border: 1px solid #000;
+    opacity: 1;
+    transition: opacity 0.2s linear;
   }
   &-content {
-    display: flex;
-    justify-content: space-between;
     margin-top: 10px;
+  }
+  &-price {
+    margin-left: 50px;
   }
   &-hover {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    min-height: 283px;
-    max-width: 283px;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
     opacity: 0;
+    cursor: pointer;
     .hover-favorite {
       position: relative;
       display: none;
@@ -389,6 +398,7 @@
       &:focus {
         g {
           fill: $red;
+          transition: 0.3s;
         }
       }
       svg {
@@ -638,7 +648,6 @@
     max-width: 588px;
     width: 100%;
     height: 445px;
-    border: 1px solid #000;
   }
 }
 //end about page
@@ -691,15 +700,14 @@
   }
   &__inner {
     display: flex;
-    border: 1px solid #000;
     height: 282px;
-    margin-bottom: 86px;
+    margin-top: 50px;
+    margin-bottom: 40px;
   }
   &__box {
-    border-right: 1px solid #000;
     max-width: 288px;
     width: 100%;
-    padding: 55px 50px 60px;
+    padding: 55px 50px 60px 0px;
     p {
       margin-bottom: 20px;
     }
@@ -709,13 +717,6 @@
   }
   &__address {
     margin: 12px 0px;
-  }
-  &__map {
-    width: 100%;
-    iframe {
-      width: 100%;
-      height: 280px;
-    }
   }
 }
 //end contacts page

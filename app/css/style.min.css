@@ -625,7 +625,6 @@ body {
   width: 100%;
   min-height: 520px;
   display: block;
-  border: 1px solid #000;
 }
 
 .banner-btn {
@@ -651,6 +650,18 @@ body {
   position: relative;
 }
 
+.product__item-wrapper {
+  background-color: #000;
+}
+
+.product__item-wrapper:hover {
+  cursor: pointer;
+}
+
+.product__item-wrapper:hover .product__item-img {
+  opacity: 0.9;
+}
+
 .product__item-img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -658,25 +669,24 @@ body {
   display: block;
   min-height: 283px;
   border: 1px solid #000;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
 }
 
 .product__item-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 10px;
+}
+
+.product__item-price {
+  margin-left: 50px;
 }
 
 .product__item-hover {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.05);
-  min-height: 283px;
-  max-width: 283px;
   width: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -686,6 +696,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   opacity: 0;
+  cursor: pointer;
 }
 
 .product__item-hover .hover-favorite {
@@ -695,6 +706,9 @@ body {
 
 .product__item-hover .hover-favorite:hover g, .product__item-hover .hover-favorite:active g, .product__item-hover .hover-favorite:focus g {
   fill: #F63C3C;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .product__item-hover .hover-favorite svg {
@@ -1043,7 +1057,6 @@ body {
   max-width: 588px;
   width: 100%;
   height: 445px;
-  border: 1px solid #000;
 }
 
 .info__text {
@@ -1098,16 +1111,15 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: 1px solid #000;
   height: 282px;
-  margin-bottom: 86px;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .contact__box {
-  border-right: 1px solid #000;
   max-width: 288px;
   width: 100%;
-  padding: 55px 50px 60px;
+  padding: 55px 50px 60px 0px;
 }
 
 .contact__box p {
@@ -1120,15 +1132,6 @@ body {
 
 .contact__address {
   margin: 12px 0px;
-}
-
-.contact__map {
-  width: 100%;
-}
-
-.contact__map iframe {
-  width: 100%;
-  height: 280px;
 }
 
 .liked-product__inner {
@@ -2265,32 +2268,12 @@ body {
   .info__text ul li {
     padding-left: 12px;
   }
-  .care__item {
-    width: 382px;
-  }
   .care__banner {
     max-width: 382px;
     margin-bottom: 230px;
   }
   .care__banner a {
     min-height: 381px;
-  }
-  .care__img-box {
-    width: 382px;
-  }
-  .care__img-box .care__img {
-    max-width: 190px;
-  }
-  .care__img-box .care__img a {
-    min-height: 190px;
-  }
-  .care__img-box .care__img-icon {
-    max-width: 190px;
-    min-height: 190px;
-  }
-  .care__icon {
-    width: 53px;
-    height: 53px;
   }
   .basket__inner {
     margin-top: 25px;
@@ -2340,11 +2323,11 @@ body {
   }
   .contact__inner {
     height: 182px;
-    margin-bottom: 66px;
+    margin-bottom: 25px;
   }
   .contact__box {
     max-width: 188px;
-    padding: 20px 15px 27px 28px;
+    padding: 20px 15px 27px 0px;
   }
   .contact__box p {
     margin-bottom: 10px;
@@ -2353,14 +2336,8 @@ body {
   .contact__box a {
     line-height: 15px;
   }
-  .contact__box .footer__item-social li + li {
-    margin-left: 25px;
-  }
   .contact__address {
     margin: 10px 0px;
-  }
-  .contact__map iframe {
-    height: 181px;
   }
   .order__inner .title {
     margin-bottom: 15px;
@@ -2696,6 +2673,9 @@ body {
     max-width: 157px;
     min-height: 157px;
   }
+  .product__item-price {
+    margin-left: 25px;
+  }
   .slick-arrow {
     top: -35px;
     padding: 0;
@@ -2753,8 +2733,8 @@ body {
   .care__items .info__text h3 {
     margin-bottom: 15px;
   }
-  .care__item {
-    width: 324px;
+  .care__items .about__text {
+    margin-bottom: 0;
   }
   .care__banner {
     max-width: 324px;
@@ -2762,23 +2742,6 @@ body {
   }
   .care__banner a {
     min-height: 323px;
-  }
-  .care__img-box {
-    width: 324px;
-  }
-  .care__img-box .care__img {
-    max-width: 162px;
-  }
-  .care__img-box .care__img a {
-    min-height: 162px;
-  }
-  .care__img-box .care__img-icon {
-    max-width: 162px;
-    min-height: 162px;
-  }
-  .care__icon {
-    width: 45px;
-    height: 45px;
   }
   .liked-product__inner {
     margin-left: -10px;
@@ -2838,11 +2801,10 @@ body {
   }
   .contact__inner {
     height: 154px;
-    margin-bottom: 56px;
   }
   .contact__box {
     max-width: 160px;
-    padding: 18px 11px 20px 20px;
+    padding: 18px 11px 20px 0px;
   }
   .contact__box p {
     margin-bottom: 5px;
@@ -2856,9 +2818,6 @@ body {
   }
   .contact__address {
     margin: 5px 0px 6px;
-  }
-  .contact__map iframe {
-    height: 153px;
   }
   .order__inner h3 {
     font-size: 17px;
@@ -3237,6 +3196,9 @@ body {
     max-width: 140px;
     min-height: 140px;
   }
+  .product__item-price {
+    margin-left: 18px;
+  }
   .popular {
     margin-bottom: 40px;
   }
@@ -3244,7 +3206,7 @@ body {
     margin-bottom: 42px;
   }
   .features__inner {
-    padding: 0px 45px;
+    padding: 0px;
   }
   .features__item-img {
     width: 56px;
@@ -3253,6 +3215,9 @@ body {
   .features__item-text {
     font-size: 9px;
     line-height: 11px;
+  }
+  .features__item:last-child {
+    display: none;
   }
   .about__item {
     -webkit-box-orient: vertical;
@@ -3363,24 +3328,23 @@ body {
   }
   .contact__inner {
     height: 142px;
-    margin-bottom: 30px;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0;
   }
   .contact__box {
     max-width: 147px;
-    padding: 15px 20px 20px 20px;
+    margin: 0 auto;
+    padding: 0;
   }
   .contact__box p {
     margin-bottom: 5px;
   }
-  .contact__box .footer__item-social li a {
-    width: 20px;
-    height: 20px;
+  .contact__box a:hover {
+    color: #E7793B;
   }
   .contact__address {
     margin: 2px 0px 6px;
-  }
-  .contact__map iframe {
-    height: 141px;
   }
   .order__inner .title {
     margin-bottom: 10px;
@@ -3592,6 +3556,10 @@ body {
   }
   .viewed-item .product__item + .product__item {
     margin-left: 6px;
+  }
+  .information .info__text {
+    text-align: center;
+    margin-top: 40px;
   }
 }
 
