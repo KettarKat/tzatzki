@@ -18,7 +18,6 @@ $(function(){
       }
     ]
   });
-  
   function checkWidth() {
     var windowWidth = $('body').innerWidth(),
         elem = $(".features__inner"); 
@@ -64,13 +63,13 @@ $('.slick-arrow').on('mouseover', function() {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2500,
       responsive: [
         {
           breakpoint: 680,
           settings: {
             dots: false,
-            autoplay: true,
-            autoplaySpeed: 1500,
           }
         }
       ]
